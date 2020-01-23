@@ -3,8 +3,6 @@ set -e
 
 INPUT_DOCKERFILE=${INPUT_DOCKERFILE:-Dockerfile}
 INPUT_TAG=${INPUT_TAG:-$GITHUB_SHA}
-INPUT_REPOSITORY=${INPUT_REPOSITORY}
-INPUT_BRANCH=${INPUT_BRANCH:-master}
 
 echo "Building Docker image ${INPUT_REPOSITORY}/${INPUT_IMAGE}:${INPUT_TAG} from ${GITHUB_REPOSITORY} on ${INPUT_BRANCH} and using context ${INPUT_FOLDER} ; and pushing it to ${INPUT_REGISTRY} Azure Container Registry"
 
