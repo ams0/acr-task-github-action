@@ -6,6 +6,7 @@ INPUT_TAG=${INPUT_TAG:-$GITHUB_SHA}
 INPUT_REPOSITORY=${INPUT_REPOSITORY}
 
 echo "Building Docker image ${INPUT_REPOSITORY}/${INPUT_IMAGE}:${INPUT_TAG} from ${INPUT_GITHUB_REPOSITORY} on ${INPUT_BRANCH} and using context ${INPUT_FOLDER} ; and pushing it to ${INPUT_REGISTRY} Azure Container Registry"
+env
 
 az login --service-principal -u $SERVICE_PRINCIPAL -p $SERVICE_PRINCIPAL_PASSWORD --tenant $TENANT
 
