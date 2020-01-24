@@ -1,6 +1,7 @@
 # acr-task-github-action
 A Github action to use Azure Container Registry to build and store docker containers
 
+## Example usage
 
 Create an SP with Contributor access to the Azure Container Registry
 ```
