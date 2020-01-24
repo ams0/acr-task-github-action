@@ -1,13 +1,16 @@
-# acr-task-github-action
+# ACR Build Task Github action
+
 A Github action to use Azure Container Registry to build and store docker containers
 
 ## Example usage
 
 Create an SP with Contributor access to the Azure Container Registry
-```
+
+```bash
 az ad sp create-for-rbac -n "acrtask0" --skip-assignment
 az role assignment create --assignee <spID> --scope <resourceID of the ACR> --role "Contributor"
 ```
+
 In your repository, create the following secrets:
 
 - service_principal
@@ -18,7 +21,7 @@ In your repository, create the following secrets:
 
 In `.github/workflows` create a workflow file like the following:
 
-```bash
+```yaml
 name: build_poi
 on:
   push:
@@ -41,9 +44,10 @@ jobs:
           folder: src/poi
           dockerfile: ../../dockerfiles/Dockerfile_3
 ```
- You can find the example [here](https://github.com/ams0/openhack-containers). The workflow will be triggered when something is pushed to `src/poi` folder. 
 
- ## Arguments
+ You can find the example [here](https://github.com/ams0/openhack-containers). The workflow will be triggered when something is pushed to `src/poi` folder.
+
+## Arguments
 
 - `service_principal` the SP for logging into the ACR (mandatory)  
 - `service_principal_password` the SP password (mandatory)
