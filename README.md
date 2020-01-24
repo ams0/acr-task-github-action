@@ -33,7 +33,7 @@ jobs:
     steps:
       - name: ACR build
         id: acr
-        uses: ams0/acr-task-github-action@master
+        uses: ams0/acr-task-github-action@v1
         with:
           service_principal: ${{ secrets.service_principal }}
           service_principal_password: ${{ secrets.service_principal_password }}
