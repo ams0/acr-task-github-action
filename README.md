@@ -44,12 +44,12 @@ jobs:
 
  ## Arguments
 
-`service_principal` the SP for logging into the ACR (mandatory)
-`service_principal_password` the SP password (mandatory)
-`tenant` SP tenant (mandatory)
-`registry` the Azure container registry, minus the `.azurecr.io` part (mandatory)
-`repository` remote repository (mandatory)
-`image` the docker image name (mandatory)
-`folder` the context for the docker build (optional)
-`dockerfile` the location of the Dockerfile relative to the context (optional)
-`tag` the docker image tag, defaults to the short git SHA (optional)
+- `service_principal` the SP for logging into the ACR (mandatory)  
+- `service_principal_password` the SP password (mandatory)
+- `tenant` SP tenant (mandatory)
+- `registry` the Azure container registry, minus the `.azurecr.io` part (mandatory)
+- `repository` remote repository (mandatory)
+- `image` the docker image name (mandatory)
+- `folder` the context for the docker build (optional)
+- `dockerfile` the location of the Dockerfile relative to the context (optional)
+- `tag` the docker image tag, defaults to the short git SHA (optional)
