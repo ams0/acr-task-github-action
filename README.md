@@ -54,7 +54,7 @@ jobs:
 - `tenant` SP tenant (mandatory)
 - `registry` the Azure container registry, minus the `.azurecr.io` part (mandatory)
 - `repository` remote repository (mandatory)
-- `image` the docker image name (mandatory)
+- `image` the docker image name (optional)
 - `folder` the context for the docker build (optional)
 - `dockerfile` the location of the Dockerfile relative to the context (optional)
 - `tag` the docker image tag, defaults to the short git SHA (optional)

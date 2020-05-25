@@ -22,7 +22,7 @@ inputs:
     required: true
   image:
     description: 'Docker image name'
-    required: true
+    required: false
   tag:
     description: 'Docker image tag, default to the commit SHA'
     required: false
