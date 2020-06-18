@@ -20,6 +20,9 @@ inputs:
   repository:
     description: 'Repository to use'
     required: true
+  git_access_token:
+    description: 'Github access token for private repositories'
+    required: true
   image:
     description: 'Docker image name'
     required: false

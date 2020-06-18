@@ -11,13 +11,14 @@ az ad sp create-for-rbac -n "acrtask0" --skip-assignment
 az role assignment create --assignee <spID> --scope <resourceID of the ACR> --role "Contributor"
 ```
 
-In your repository, create the following secrets:
+In your repository, create the following secrets (or set them in clean in the workflow definition):
 
 - service_principal
 - service_principal_password
 - tenant
 - registry
 - repository
+- (optional, for accessing private repositories) git_access_token 
 
 In `.github/workflows` create a workflow file like the following:
 
@@ -40,6 +41,7 @@ jobs:
           tenant: ${{ secrets.tenant }}
           registry: ${{ secrets.registry }}
           repository: ${{ secrets.repository }}
+          git_access_token: ${{ secrets.git_access_token }}
           image: poi
           folder: src/poi
           dockerfile: ../../dockerfiles/Dockerfile_3
