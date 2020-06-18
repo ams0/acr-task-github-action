@@ -41,8 +41,8 @@ jobs:
           tenant: ${{ secrets.tenant }}
           registry: ${{ secrets.registry }}
           repository: ${{ secrets.repository }}
+          image: poi #image name, mandatory
           git_access_token: ${{ secrets.git_access_token }}
-          image: poi
           folder: src/poi
           dockerfile: ../../dockerfiles/Dockerfile_3
 ```
