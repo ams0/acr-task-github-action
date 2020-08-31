@@ -58,3 +58,4 @@ jobs:
 - `folder` the context for the docker build (optional)
 - `dockerfile` the location of the Dockerfile relative to the context (optional)
 - `tag` the docker image tag, defaults to the short git SHA (optional)
+- `build_args` the docker build args in JSON format (`[{"MY_ARG": "this_is_a_test"}]`)
