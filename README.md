@@ -1,3 +1,7 @@
+# Deprecated! #
+
+Please use the action at https://github.com/Azure/acr-build
+
 # ACR Build Task Github action
 
 A Github action to use Azure Container Registry to build and store docker containers.
