@@ -1,4 +1,4 @@
-name: "Azure Container Registry Build"
+name: "Azure Container Registry Build - Deprecated"
 author: "Alessandro Vozza"
 branding:
   icon: "code"
